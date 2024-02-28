@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US Population</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #000000;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #00000038;
+        }
+    </style>
+</head>
+<body>
+    <h1>US Population</h1>
+    <table id="populationTable">
+        <!-- Display Population Data -->
+    </table>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch("https://datausa.io/api/data?drilldowns=Nation&measures=Population")
+                .then(response => response.json())
+                .then(data => displayPopulationData(data.data));
+        });
+
+        function displayPopulationData(populationData) {
+            // Sort years
+            populationData.sort((a, b) => a.Year - b.Year);
+
+            const table = document.getElementById("populationTable");
+
+            table.innerHTML = `
+                <tr>
+                    <th>Year</th>
+                    <th>Population</th>
+                </tr>
+                ${populationData.map(entry => `<tr><td>${entry.Year}</td><td>${entry.Population}</td></tr>`).join('')}
+            `;
+        }
+    </script>
+</body>
+</html>
