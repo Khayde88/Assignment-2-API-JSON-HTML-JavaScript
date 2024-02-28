@@ -10,5 +10,4 @@ This project displays US Population data retrieved from the datausa.io API.
 - ...
 
 ## Screenshots
-![Web Page Screenshot](screenshot1.png)
-![Screenshot2](screenshots/screenshot2.png)
+![Web Page Screenshot](US Population Screenshot.png)
