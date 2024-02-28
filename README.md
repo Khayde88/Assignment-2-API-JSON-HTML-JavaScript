@@ -1,3 +1,6 @@
+# Assignment 2
+# Cade Anderson
+
 # US Population Display Table
 
 This assignment displays US Population data sorted by year and population obtained from the datausa.io API.
@@ -11,4 +14,4 @@ This assignment displays US Population data sorted by year and population obtain
 - The <script> section contains all the JavaScript code for fetching data from the api and mapping that data to the previously created table.
 
 ## Screenshots
-![Web Page Screenshot](main/US Population Screenshot.png)
+![Web Page Screenshot](US Population Screenshot.png)
