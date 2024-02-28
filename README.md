@@ -13,5 +13,5 @@ This assignment displays US Population data sorted by year and population obtain
 - Included is standard HTML structure with a styled table for displaying data.
 - The <script> section contains all the JavaScript code for fetching data from the api and mapping that data to the previously created table.
 
-## Screenshots
+## Screenshot
 ![Web Page Screenshot](US_Population_Screenshot.png)
